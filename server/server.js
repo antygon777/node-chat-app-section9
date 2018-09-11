@@ -7,11 +7,11 @@ const express = require('express');
 
 //...... 
 const publicPath = path.join(__dirname, '../public');
+const port = process.env.PORT || 3000;
 
 //...... para na CLI, ver as diferenças na construção do path;
 //console.log( __dirname + '/../public' );
 //console.log( 'publicPath:::' + publicPath );
-
 
 //...... 
 var app = express();
@@ -36,6 +36,7 @@ app.get('/about-template-basic', ( req, res ) => {
 				});	
 */
 //...... 
-app.listen(3000, () => {
-	console.log("Express listen in http://localhost:3000/")
+//
+app.listen(port, () => {
+	console.log(`Server is up on port::: ${port}`);
 });
